@@ -1,0 +1,73 @@
+<div class="container mt-5 border p-3">
+    <h1 class="text-center">reactiv driven form</h1>
+    <form [formGroup]="signUpForm" (ngSubmit)="save()">
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <label for="fname">first name</label>
+            <input type="text" name="fname" id="id1" class="form-control" formControlName="firstname">
+           <div *ngIf="signUpForm.controls['firstname'].touched && signUpForm.controls['firstname'].invalid">
+            <div class="invalid-feedback d-block" *ngIf="signUpForm.controls['firstname'].errors?.['required']">
+                it is required field
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="signUpForm.controls['firstname'].errors?.['pattern']">
+                minimum length is 3
+            </div>
+           </div>
+        </div>
+       
+        <div class="col-md-4">
+            <label for="fname">last name</label>
+            <input type="text" name="fname" id="id1" class="form-control" formControlName="lastname">
+        </div>
+        <div class="col-md-4">
+            <label for="fname">mobile number</label>
+            <input type="text" name="fname" id="id1" class="form-control" formControlName="mobilenumber">
+        </div>
+        <div class="col-md-4">
+            <label for="fname">email</label>
+            <input type="text" name="fname" id="id1" class="form-control" formControlName="email">
+        </div>
+        <div class="col-md-4">
+            <label class="form-check-label mt-4 px-2">gender:</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" formControlName="gender">
+                <label class="form-check-label" for="inlineRadio1">male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="female" formControlName="gender">
+                <label class="form-check-label" for="inlineRadio1">female</label>
+             </div>
+             
+            
+        </div>
+
+
+
+
+
+    </div>
+    <h4 class="mt-4">Address details</h4>
+             <div class="row mt-4" formGroupName="address">
+                <div class="col-md-4">
+                    <label for="fname">last name</label>
+                    <input type="text" name="fname" id="id1" class="form-control" formControlName="line1">
+                </div>
+                <div class="col-md-4">
+                    <label for="fname">last name</label>
+                    <input type="text" name="fname" id="id1" class="form-control" formControlName="line2">
+                </div>
+                <div class="col-md-4">
+                    <label for="fname">last name</label>
+                    <input type="text" name="fname" id="id1" class="form-control" formControlName="city">
+                </div>
+                <div class="col-md-4">
+                    <label for="fname">last name</label>
+                    <input type="text" name="fname" id="id1" class="form-control" formControlName="state">
+                </div>
+                
+             </div>
+             <div>
+                <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-primary mt-4 px-4">Save</button>
+            </div>
+</form>
+</div>

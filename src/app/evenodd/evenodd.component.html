@@ -1,0 +1,28 @@
+<div class="conainer">
+    <h1 class="mx-auto p-2 text-decoration-underline" style="width: 400px;">Employee Details</h1>
+   
+    
+  <table class="table table-striped border">
+    <thead>
+        <tr>
+            <th>employee Id</th>
+            <th>employee Name</th>
+            <th>designation</th>
+            <th>salary</th>
+            <th>country</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <ng-container *ngFor="let employee of employeeList ;let i=index;let o=odd" >
+            <tr [ngClass]="{demoCss:o}" *ngIf="employee.salary>50000">
+            <td>{{employee.employeeId}}</td>
+            <td>{{employee.employeeName}}</td>
+            <td>{{employee.designation}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.country}}</td>
+        </tr>
+        </ng-container>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
+
+.customStyle{
+    color:aquamarine;
+    font-style: italic;
+    font-weight: 300;
+    font-size: large;
+}
+
+

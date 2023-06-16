@@ -1,0 +1,7 @@
+<h2>two way data binding without ngModel directive</h2>
+<label for="id1">firstname</label>
+<input type="text" name="fname" id="id1" [value]="fname" (keyup)="setmessage($event)">
+{{fname}}<br><br>
+<h2>two way data binding with ngModel</h2>
+<label for="idd">firstname</label>
+<input type="text" name="lname" id="idd" [(ngModel)]="lname">{{lname}}

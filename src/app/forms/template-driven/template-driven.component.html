@@ -1,0 +1,36 @@
+<div class="container mt-5 shaddow w-50">
+  <h1 class="text-center">template driven-form</h1>
+  <form #signUpForm="ngForm">
+      <div class="mb-3">
+        <label for="id1" class="form-label">first name</label>
+        <input type="text" class="form-control" id="id1" name="fname" ngModel required pattern="[a-zA-Z]{3,6}" minlength="3">
+      
+      </div>
+      <div class="mb-3">
+          <label for="id2" class="form-label">last name </label>
+          <input type="text" class="form-control" id="id2" name="lname" ngModel required pattern="[a-zA-Z]{3,6}" minlength="3">
+        
+        </div>
+        <div class="mb-3">
+          <label for="id3" class="form-label"> mobile no</label>
+          <input type="number" class="form-control" id="id3"  name="mobile" ngModel required pattern="[7-9][0-9]{9,9}" minlength="10">
+        
+        </div>
+        <div class="mb-3">
+          <label for="id4" class="form-label">email id </label>
+          <input type="email" class="form-control" id="id4"  name="email" ngModel required pattern="	
+          ^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+        
+        </div>
+      <div class="mb-3">
+        <label for="id5" class="form-label">Password</label>
+        <input type="password" class="form-control" id="id5" name="password" ngModel required pattern="[0-9]{8,8}" minlength="8">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check" ngModel required>
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</div>

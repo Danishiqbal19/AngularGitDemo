@@ -1,0 +1,17 @@
+<h1>example of *ngIF=></h1>
+<label for="ida">age</label>
+
+<input type="text" name="age" id="ida" [(ngModel)]="age">{{age}}<br><br>
+<h1 style="color:blueviolet" *ngIf="age>18; then thenBlock; else elseBlock"></h1>
+<ng-template #elseBlock>
+    <h1 style="color:brown">enter the valid age</h1>
+</ng-template>
+<ng-template #thenBlock>
+    <h1 style="color:aquamarine">it is eligible for voting</h1>
+
+</ng-template>
+<h1>example of *ngFor=></h1>
+<ul>
+    <li *ngFor="let item of list; let i=index">{{i+1}}&nbsp;{{item}}</li>
+</ul>
+

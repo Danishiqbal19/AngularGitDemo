@@ -1,0 +1,82 @@
+<!-- <div class="container w-50 mt-5 shadow p-4">
+    <div class="row">
+        <h1 class="text-center">template driven form</h1>
+    </div>
+    <form #signup="ngForm" >
+        <div class="mb-3">
+          <label for="id1" class="form-label">first name</label>
+          <input type="text" class="form-control" id="id1" name="fname" [(ngModel)]="signupform.firstname" required pattern="[a-zA-z]{2,10}" minlength="2" maxlength="10" #fname="ngModel">
+          <div class="row" *ngIf="fname.touched && fname.invalid">
+            <div class="invalid-feedback d-block" *ngIf="fname.errors?.['required']">it is required</div>
+            <div class="invalid-feedback d-block" *ngIf="fname.errors?.['pattern']">please enter the valid name</div>
+            <div class="invalid-feedback d-block" *ngIf="fname.errors?.['minlength']">minimum two charecters are required</div>
+          </div>
+
+        </div>
+        <div class="mb-3">
+          <label for="id2" class="form-label">last name</label>
+          <input type="text" class="form-control" id="id2" name="lname" [(ngModel)]="signupform.lastname" required pattern="[a-zA-Z]{2,10}" minlength="2" maxlength="10" #lname="ngModel">
+          <div class="row" *ngIf="lname.touched && lname.invalid">
+            <div class="invalid-feedback d-block" *ngIf="lname.errors?.['required']">it is required field</div>
+            <div class="invalid-feedback d-block" *ngIf="lname.errors?.['pattern']">please enter the valid name</div>
+            <div class="invalid-feedback d-block" *ngIf="lname.errors?.['minlength']">minimum two charecters ar required</div>
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="id3" class="form-label">mobile number</label>
+            <input type="text" class="form-control" id="id2" name="mobile" ngModel required pattern="[7-9][0-9]{10,10}" minlength="10" maxlength="10">
+          </div>
+          <div class="mb-3">
+            <label for="id4" class="form-label">email id</label>
+            <input type="email" class="form-control" id="id4" name="email" [(ngModel)]="signupform.mobileNo" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #mobno="ngModel">
+            <div class="row" *ngIf="mobno.touched && mobno.invalid">
+                <div class="invalid-feedback d-block" *ngIf="mobno.errors?.['required']">it is required field</div>
+                <div class="invalid-feedback d-block" *ngIf="mobno.errors?.['pattern']">please enter valid mobile number</div>
+                
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="id5" class="form-label">address</label>
+            <input type="text" class="form-control" id="id5" name="address" [(ngModel)]="signupform.address" required pattern="[a-zA-Z]{3,10}" minlength="3"  #address="ngModel">
+            <div class="row" *ngIf="address.touched && address.invalid">
+                <div class="invalid-feedback d-block" *ngIf="address.errors?.['required']">it is required field</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="idd" class="form-label">age</label>
+            <input type="date" class="form-control" id="idd" name="age" [(ngModel)]="signupform.age" required   #age="ngModel" [(ngModelChange)]="calculateage()">
+            <div class="row" *ngIf="age.touched && age.invalid">
+                <div class="invalid-feedback d-block" *ngIf="age.errors?.['required']">it is required field</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="ids" class="form-label">date of birth</label>
+            <input type="text" class="form-control" id="ids" name="address" [(ngModel)]="signupform.dateofbirth" required pattern="[a-zA-Z]{3,10}" minlength="3"  #address="ngModel" {{age}}>
+            <div class="row" *ngIf="address.touched && address.invalid">
+                <div class="invalid-feedback d-block" *ngIf="address.errors?.['required']">it is required field</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="id6" class="form-label">state</label>
+            <select class="form-control" id="id6" name="state" [(ngModel)]="signupform.state" required pattern="[a-zA-Z]{3,10}" minlegth="3" (ngModelChange)="getcites()">
+                <option *ngFor="let item of states">{{item}}</option>
+                </select>
+          </div>
+          <div class="mb-3">
+            <label for="id7" class="form-label">city</label>
+            <select class="form-control" id="id7" name="cities" [(ngModel)]="signupform.city" required pattern="[a-zA-Z]{3,10}" minlegth="3">
+                <option *ngFor="let item of cities" [value]="item">{{item}}</option>
+                </select>
+          </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="id8" name="checkbox" ngModel requird >
+          <label class="form-check-label" for="id8">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div> -->
+<div class="container mt-5 w-50 shaddow">
+  <div class="row">
+    <h1 class="text-center">reactive driven form</h1>
+  </div>
+</div>

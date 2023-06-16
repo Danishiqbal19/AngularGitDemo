@@ -1,0 +1,32 @@
+<div class="container">
+    <h3 class="mx-auto p-2 text-decoration-underline" style="width: 400px;">
+      Employee Details
+    </h3>
+    <table class="table table-striped border">
+      <thead>
+          <tr>
+              <th>employeeid</th>
+              <th>Employee Name</th>
+              <th>Employee Designation</th>
+              <th>Gender</th>
+              <th>Salary</th>
+              <th>Country</th>
+          </tr>
+      </thead>
+      <tbody>
+          <ng-container *ngFor="let employee of employeeList;let i=index;let o=odd">
+              <tr>
+                <td>{{employee.employeeid}}</td>
+                <td>{{employee.employeename | title:employee.gender}}</td>
+                <td>{{employee.EmployeeDesignation}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.country}}</td>
+              </tr>
+          </ng-container>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  

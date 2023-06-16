@@ -1,0 +1,12 @@
+<h1>event binding which is one way data binding</h1>
+<button (click)="display()">clickme</button><br><br>
+<button (click)="increment()">increment</button>&nbsp; {{counter}}
+<button (click)="decrement()">decrement</button>
+<h1>mouseover event example</h1>
+<!-- <h1 (mouseover)="changemessage()">{{message}}</h1> -->
+<h1>mouseout example</h1>
+<h1 (mouseout)="changemessage()">{{message}}</h1>
+<h1>change event example with $event</h1>
+<input type="text" (change)="setName($event)">{{firstName}}
+<br><br>
+<h1>two way data binding</h1>

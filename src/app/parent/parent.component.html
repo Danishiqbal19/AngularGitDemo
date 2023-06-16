@@ -1,0 +1,5 @@
+
+<h1>this is parent component</h1>
+<label for="id1">Enter value</label>
+<input type="text" id="id1" name="fname" [(ngModel)]="message">
+<app-child [messageReceived]="message"></app-child>
